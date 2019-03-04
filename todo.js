@@ -1,3 +1,19 @@
-const toDoform = document.querySelector(".js-toDoForm"),
+const toDoForm = document.querySelector(".js-toDoForm"),
     toDoInput = form.querySelector("input"),
-    todoList = document.querySelector(".js-toDoList");
+    toDoList = document.querySelector(".js-toDoList");
+
+const TODOS_LS = 'toDos';
+
+function loadToDos(){
+    const toDos = localStorage.getItem(TODOS_LS)
+    if(toDos !== null){
+        
+    }
+}
+
+function init() {
+    loadToDos();
+    toDoForm.addEventListener("submit", handleSubmit)
+}
+
+init();

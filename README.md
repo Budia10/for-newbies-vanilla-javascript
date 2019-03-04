@@ -1,1 +1,1 @@
-# Vanila JavaScript
+# for-newbies-vanilla-javascript
