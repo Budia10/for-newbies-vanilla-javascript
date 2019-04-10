@@ -1,21 +1,20 @@
 const title = document.querySelector("#title");
 
-const CLICKED_CLASS = "clicked";
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
 
 function handleClick() {
-    title.classList.toggle(CLICKED_CLASS);
-    console.log(title.classList.toggle);
-    // const hasClass = title.classList.contains(CLICKED_CLASS);
-    // if (hasClass) {
-    //     title.classList.remove(CLICKED_CLASS);
-    // } else {
-    //     title.classList.add(CLICKED_CLASS);
-    // }
+    const currentColor = title.style.color;
+    if (currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    } else {
+        title.style.color = BASE_COLOR;
+    }
 }
 
-console.log(title.className);
-
-function init() {
+function init(){
+    title.style.color = BASE_COLOR;
     title.addEventListener("click", handleClick);
 }
+
 init();
