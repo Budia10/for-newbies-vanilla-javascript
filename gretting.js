@@ -2,7 +2,7 @@ const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector(".js-greetings")
 
-function saveName() {
+function saveName(text) {
     localStorage.setItem(USER_LS, text);
 }
 
@@ -10,12 +10,12 @@ const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
 
 function handleSubmit(event) {
+    console.log("handleSubmitStart");
     event.preventDefault();
     const curretValue = input.value;
-    // input.text = `${curretValue}`
-    // console.log(curretValue);
     paintGreeting(curretValue);
     saveName(curretValue);
+    console.log("handleSubmitEnd");
 }
 
 function askForName() {
